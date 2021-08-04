@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header, section, footer {
+  width: 100%;
+}
+
+h1 {
+  color: #21055F;
+  font-size: 25px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.para {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 35px;
+  background-color: #01A6A3;
+  color: white;
+  font-weight: medium;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.btn img {
+  display: inline-block;
+  width: 20px;
+  margin-left: 8px;
+}
+
+section {
+  padding: 75px 0px;
+}
+
+.brand {
+  font-family: "MonteCarlo", cursive;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-size: 50px;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+@media only screen and (min-width: 426px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 512px) {
+  .container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+.container .img__container {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .container .img__container {
+    width: 50%;
+  }
+}
+.container .img__container img {
+  display: block;
+  width: 100%;
+}
+.container .texts {
+  width: 100%;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .container .texts {
+    width: 50%;
+  }
+}
+
+.svg {
+  width: 65px;
+  margin: 10px auto;
+}
+
+/*# sourceMappingURL=style.css.map */

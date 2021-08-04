@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+// fonts 
+header, section, footer {
+    width: 100%;
+}
+
+$brand: 'MonteCarlo', cursive;
+
+// mixing 
+@mixin resp ($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+// common style 
+h1 {
+    color: #21055F;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.para {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #01A6A3;
+    color: white;
+    font-weight: medium;
+    text-decoration: none;
+    font-size: 25px;
+    display: inline-block;
+    border-radius: 5px;
+
+    img {
+        display: inline-block;
+        width: 20px;
+        margin-left: 8px;
+    }
+}
+
+
+section {
+    padding: 75px 0px;
+}
+
+
+.brand {
+    font-family: $brand;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 50px;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include resp (426px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include resp (512px) {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .img__container {
+        width: 100%;
+        @include resp (768px) {
+            width: 50%;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .texts {
+        width: 100%;
+        margin-top: 40px;
+        @include resp (768px) {
+            width: 50%;
+        }
+    }
+}
+
+
+.svg {
+    width: 65px;
+    margin: 10px auto;
+}
+
+#main {
+}
