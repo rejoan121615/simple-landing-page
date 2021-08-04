@@ -5,13 +5,15 @@
   font-family: "Roboto", sans-serif;
 }
 
-header, section, footer {
+main, header, section, footer {
   width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 h1 {
   color: #21055F;
-  font-size: 25px;
+  font-size: 30px;
   text-transform: capitalize;
   text-align: center;
 }
@@ -20,11 +22,49 @@ h1 {
     font-size: 35px;
   }
 }
+@media only screen and (min-width: 540px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 37px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 45px;
+  }
+}
 
 .para {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-top: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .para {
+    margin-top: 13px;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .para {
+    margin-top: 18px;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .para {
+    font-size: 1.65rem;
+    line-height: 150%;
+  }
 }
 
 .btn {
@@ -42,10 +82,6 @@ h1 {
   display: inline-block;
   width: 20px;
   margin-left: 8px;
-}
-
-section {
-  padding: 75px 0px;
 }
 
 .brand {
@@ -80,7 +116,7 @@ section {
 }
 @media only screen and (min-width: 768px) {
   .container {
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -107,16 +143,9 @@ section {
 }
 .container .texts {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 10px;
 }
-@media only screen and (min-width: 768px) {
-  .container .texts {
-    width: 50%;
-  }
-}
-
 .svg {
-  width: 65px;
   margin: 10px auto;
 }
 
@@ -195,12 +224,34 @@ section {
 @media only screen and (min-width: 992px) {
   #main .texts {
     width: 38%;
+    margin-top: 0px;
   }
 }
 #main .texts .svg {
+  width: 100%;
   font-size: 55px;
   color: #f8fb94;
   text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+@media only screen and (min-width: 540px) {
+  #main .texts .svg {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #main .texts .svg {
+    font-size: 85px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #main .texts .svg {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #main .texts .svg {
+    font-size: 76px;
+  }
 }
 #main .texts .game__func {
   position: relative;
@@ -220,12 +271,131 @@ section {
   top: 20px;
 }
 #main .texts .para {
-  margin-top: 10px;
   text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#dSpace .container .img__container {
-  order: 2;
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  section .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .container {
+    width: 1170px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section .container .img__container {
+    width: 50%;
+  }
+}
+section .container .img__container img {
+  width: 100%;
+  max-width: 170px;
+}
+@media only screen and (min-width: 540px) {
+  section .container .img__container img {
+    max-width: 230px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  section .container .img__container img {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .container .img__container img {
+    max-width: 380px;
+  }
+}
+section .container .texts {
+  margin-top: 25px;
+}
+@media only screen and (min-width: 768px) {
+  section .container .texts {
+    width: 45%;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  section .container .texts {
+    width: 40%;
+  }
+}
+section .container .texts h1 {
+  font-size: 28px;
+  color: #0C6AB6;
+}
+@media only screen and (min-width: 540px) {
+  section .container .texts h1 {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section .container .texts h1 {
+    text-align: left;
+    font-size: 37px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  section .container .texts h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .container .texts h1 {
+    font-size: 47px;
+  }
+}
+section .container .texts .para {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  section .container .texts .para {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  section .container .texts .para {
+    font-size: 1.4rem;
+    max-width: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #dSpace .container .img__container {
+    order: 2;
+  }
+}
+
+#calling .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 1200px) {
+  #calling .container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+#calling .container .btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

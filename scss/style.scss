@@ -6,8 +6,10 @@
 }
 
 // fonts 
-header, section, footer {
+main, header, section, footer {
     width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 $brand: 'MonteCarlo', cursive;
@@ -24,18 +26,42 @@ $brand: 'MonteCarlo', cursive;
 // common style 
 h1 {
     color: #21055F;
-    font-size: 25px;
+    font-size: 30px;
     text-transform: capitalize;
     text-align: center;
     @include resp (420px) {
         font-size: 35px;
     }
+    @include resp (540px) {
+        font-size: 42px;
+    }
+    @include resp (768px) {
+        font-size: 55px;
+    }
+    @include resp (992px) {
+        font-size: 37px;
+    }
+    @include resp (1200px) {
+        font-size: 45px;
+    }
 }
 
 .para {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
     margin-top: 8px;
+    @include resp (768px) {
+        margin-top: 13px;
+        font-size: 1.4rem;
+    }
+    @include resp (992px) {
+        margin-top: 18px;
+        font-size: 1.5rem;
+    }
+    @include resp (1200px) {
+        font-size: 1.65rem;
+        line-height: 150%;
+    }
 }
 
 .btn {
@@ -54,11 +80,6 @@ h1 {
         width: 20px;
         margin-left: 8px;
     }
-}
-
-
-section {
-    padding: 75px 0px;
 }
 
 
@@ -88,7 +109,7 @@ section {
         padding-right: 75px;
     }
     @include resp (768px) {
-        width: 80%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
@@ -111,16 +132,15 @@ section {
     }
     .texts {
         width: 100%;
-        margin-top: 40px;
+        margin-top: 10px;
         @include resp (768px) {
-            width: 50%;
+            // width: 50%;
         }
     }
 }
 
 
 .svg {
-    width: 65px;
     margin: 10px auto;
 }
 
@@ -194,11 +214,25 @@ section {
     .texts {
         @include resp (992px) {
             width: 38%;
+            margin-top: 0px;
         }
         .svg {
-            font-size: 55px;
+            width: 100%;
+        font-size: 55px;
           color: #f8fb94;
             text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16,16,16,0.4), 1px 22px 10px rgba(16,16,16,0.2), 1px 25px 35px rgba(16,16,16,0.2), 1px 30px 60px rgba(16,16,16,0.4);  
+            @include resp (540px) {
+                font-size: 70px;
+            }
+            @include resp (768px) {
+                font-size: 85px;
+            }
+            @include resp (992px) {
+                font-size: 70px;
+            }
+            @include resp (1200px) {
+                font-size: 76px;
+            }
         }
         .game__func {
             position: relative;
@@ -219,9 +253,10 @@ section {
             }
         }
         .para {
-            margin-top: 10px;
             text-align: center;
-            // max-width: ;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -230,12 +265,106 @@ section {
 // multi user 
 
 
-
-// 3d space 
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container {
+        @include resp (768px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        @include resp (1200px) {
+            width: 1170px;
+        }
+        .img__container {
+            @include resp (768px) {
+                width: 50%;
+            }
+            img {
+                width: 100%;
+                max-width: 170px;
+                @include resp (540px) {
+                    max-width: 230px;
+                }
+                @include resp (992px) {
+                    max-width: 300px;
+                }
+                @include resp (1200px) {
+                    max-width: 380px;
+                }
+            }
+        }
+        .texts {
+            margin-top: 25px;
+            @include resp (768px) {
+                width: 45%;
+                margin-top: 0px;
+            }
+            @include resp (992px) {
+                width: 40%;
+            }
+            @include resp (1200px) {
+            }
+            h1 {
+                font-size: 28px;
+                color: #0C6AB6;
+                @include resp (540px) {
+                    font-size: 34px;
+                }
+                @include resp (768px) {
+                    text-align: left;
+                    font-size: 37px;
+                }
+                @include resp (992px) {
+                    font-size: 40px;
+                }
+                @include resp (1200px) {
+                    font-size: 47px;
+                }
+            }
+            .para {
+                max-width: 370px;
+                margin-left: auto;
+                margin-right: auto;
+                @include resp (768px) {
+                    text-align: left;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                @include resp (992px) {
+                    font-size: 1.4rem;
+                    max-width: initial;
+                }
+            }
+        }
+    }
+}
+// virtual 3d space section 
 #dSpace {
     .container {
         .img__container {
-            order: 2;
+            @include resp (768px) {
+
+                order: 2;
+            }
+        }
+    }
+}
+// calling section 
+#calling {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @include resp (1200px) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+        .btn {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
