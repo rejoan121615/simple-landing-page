@@ -113,8 +113,34 @@
         </div>
     </section>
     <!-- footer section ------------------------ -->
-    <footer>
-        <p></p>
-    </footer>
+    <section id="alert">
+        <div class="cross">
+            <img src="./img/close.png" alt="close icon">
+        </div>
+        <div class="box">
+            <p class="box__para">Thank you for your request. We are in alpha mode now and plan to roll out after <span>01 of October 2021.</span> Let's meet in October!</p>
+        </div>
+    </section>
+    <!-- script  -->
+    <script>
+        const closeBtn = document.querySelector('.cross');
+        const getAlert = document.querySelector('#alert');
+        const callMeBtn = document.querySelector('.btn');
+        const body = document.querySelector('body');
+        let counter = true;
+        callMeBtn.addEventListener('click', (event) => {
+                getAlert.style.display = 'grid';
+                document.querySelector('body').style.overflow = 'hidden';
+                counter = false;
+            event.preventDefault()
+        })
+        closeBtn.addEventListener('click', (event) => {
+            getAlert.style.display = 'none';
+            body.style.overflow = 'initial';
+            counter = true;
+            event.preventDefault()
+        })
+
+    </script>
 </body>
 </html>

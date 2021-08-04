@@ -43,25 +43,25 @@ h1 {
   }
 }
 
-.para {
+.para, #alert .box .box__para {
   font-size: 1.3rem;
   text-align: center;
   margin-top: 8px;
 }
 @media only screen and (min-width: 768px) {
-  .para {
+  .para, #alert .box .box__para {
     margin-top: 13px;
     font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 992px) {
-  .para {
+  .para, #alert .box .box__para {
     margin-top: 18px;
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .para {
+  .para, #alert .box .box__para {
     font-size: 1.65rem;
     line-height: 150%;
   }
@@ -92,6 +92,16 @@ h1 {
   text-transform: capitalize;
   font-size: 50px;
   display: block;
+}
+@media only screen and (min-width: 768px) {
+  .brand {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .brand {
+    font-size: 90px;
+  }
 }
 
 .container {
@@ -194,6 +204,12 @@ h1 {
     height: 20px;
   }
 }
+@media only screen and (min-width: 992px) {
+  #main .img__wrap .img__container .name .round {
+    width: 28px;
+    height: 28px;
+  }
+}
 #main .img__wrap .img__container .name h3 {
   text-transform: capitalize;
   font-size: 18px;
@@ -207,6 +223,11 @@ h1 {
 @media only screen and (min-width: 768px) {
   #main .img__wrap .img__container .name h3 {
     font-size: 26px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #main .img__wrap .img__container .name h3 {
+    font-size: 32px;
   }
 }
 #main .img__wrap .img__ant .round {
@@ -270,7 +291,7 @@ h1 {
   z-index: -10;
   top: 20px;
 }
-#main .texts .para {
+#main .texts .para, #main .texts #alert .box .box__para, #alert .box #main .texts .box__para {
   text-align: center;
   max-width: 400px;
   margin-left: auto;
@@ -358,20 +379,20 @@ section .container .texts h1 {
     font-size: 47px;
   }
 }
-section .container .texts .para {
+section .container .texts .para, section .container .texts #alert .box .box__para, #alert .box section .container .texts .box__para {
   max-width: 370px;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 768px) {
-  section .container .texts .para {
+  section .container .texts .para, section .container .texts #alert .box .box__para, #alert .box section .container .texts .box__para {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
   }
 }
 @media only screen and (min-width: 992px) {
-  section .container .texts .para {
+  section .container .texts .para, section .container .texts #alert .box .box__para, #alert .box section .container .texts .box__para {
     font-size: 1.4rem;
     max-width: initial;
   }
@@ -396,6 +417,60 @@ section .container .texts .para {
 #calling .container .btn {
   margin-left: auto;
   margin-right: auto;
+}
+
+#alert {
+  background-color: #16033f8f;
+  display: none;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#alert .cross {
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+@media only screen and (min-width: 992px) {
+  #alert .cross {
+    right: 100px;
+    top: 80px;
+  }
+}
+#alert .cross img {
+  display: block;
+  width: 100%;
+}
+#alert .box {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 15px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 50px 75px;
+}
+#alert .box .box__para {
+  color: black;
+  line-height: 200%;
+}
+#alert .box .box__para span {
+  background-color: #bb1515cc;
+  padding: 5px;
+  color: white;
+}
+
+#alert.close {
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */

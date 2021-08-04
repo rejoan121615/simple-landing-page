@@ -91,6 +91,12 @@ h1 {
     text-transform: capitalize;
     font-size: 50px;
     display: block;
+    @include resp (768px) {
+        font-size: 75px;
+    }
+    @include resp (992px) {
+        font-size: 90px;
+    }
 }
 
 .container {
@@ -180,6 +186,10 @@ h1 {
                         width: 20px;
                         height: 20px;
                     }
+                    @include resp (992px) {
+                        width: 28px;
+                        height: 28px;
+                    }
                 } 
                h3 {
                    text-transform: capitalize;
@@ -190,6 +200,9 @@ h1 {
                    }
                    @include resp (768px) {
                        font-size: 26px;
+                   }
+                   @include resp (992px) {
+                       font-size: 32px;
                    }
                }
             }
@@ -367,4 +380,57 @@ section {
             margin-right: auto;
         }
     }
+}
+
+#alert {
+    background-color: #16033f8f;
+    display: none;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .cross {
+        width: 35px;
+        height: 35px;
+        background-color: black;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        @include resp (992px) {
+            right: 100px;
+            top: 80px;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .box {
+        width: 80%;
+        max-width: 800px;
+        border-radius: 15px;
+        background-color: white;
+        border: 2px solid black;
+        padding: 50px 75px;
+        .box__para {
+            color: black;
+            @extend .para;
+            line-height: 200%;
+            span {
+                background-color: #bb1515cc;
+                padding: 5px;
+                color: white;
+            }
+        }
+    }
+}
+
+#alert.close {
+    display: grid;
 }
